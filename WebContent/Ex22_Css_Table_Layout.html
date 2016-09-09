@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+
+<style>
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+table, th, td {
+	border: 1px solid black;
+}
+
+td {
+	text-align: center;
+	color: red;
+}
+
+th {
+	background-color: gray;
+}
+
+tr:NTH-CHILD(even) {
+	background-color: gold;
+}
+tr:HOVER {
+	background-color: red;
+}
+</style>
+
+</head>
+<body>
+	<h2>Add a border to a table:</h2>
+
+	<table>
+		<tr>
+			<th>Firstname</th>
+			<th>Lastname</th>
+		</tr>
+		<tr>
+			<td>Peter</td>
+			<td>Griffin</td>
+		</tr>
+		<tr>
+			<td>Lois</td>
+			<td>Griffin</td>
+		</tr>
+	</table>
+
+</body>
+</html>

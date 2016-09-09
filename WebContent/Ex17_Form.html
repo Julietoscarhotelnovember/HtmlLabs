@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>개발지 필수 태그</title>
+</head>
+<body>
+	<!-- <form action="loginok.jsp" method="get">
+		<input type="text" name="id">
+		<input type="text" name="username">
+		<input type="submit" value="로그인">
+	</form> -->
+	
+	<form action="loginok.jsp" method="post">
+		<input type="text" name="id">
+		<input type="text" name="username">
+		<input type="submit" value="로그인">
+	</form>
+	
+	<!--
+	form 전송을 담당하는 태그
+	유일한 방법이랍니다
+	클라이언트 데이터 -> 서버전송
+	
+	action은 목적지 주소
+	method는 전송방법
+		get: 데이터 노출 > loginok.jsp?id=kglim (폼 보다는 링크형태 전송에 적합: 게시판 목록 처리)
+			 <a href="board.jsp?id=100">글보기</a>
+		post: 데이터 감추기 > http 프로토콜 내부에 데이터 숨김 > loginok.jsp
+	출발시키는 친구
+		<input type="submit"
+		<input type="image" 내부적으로 submit을 가지고 있다
+		<input type="button" + document.form.submit()
+	form안에서 사용하는 태그
+		주로 input 계열 태그
+		입력, 선택, 수정
+	-->
+</body>
+</html>

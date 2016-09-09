@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Form 안에 사용할 수 있는 input 태그</title>
+</head>
+<body>
+	<form action="">
+		<fieldset>
+			<legend>Text: Password</legend>
+			Text: <input type="text" name="userid"><br>
+			Password: <input type="password" name="userpwd" maxlength="5">
+			<hr>
+			Text2: <input type="text" name="data" maxlength="10 size="60px" value="입력하쇼">
+			<hr>
+			readonly(데이터 전송 가능)
+			<input type="text" name="data2" value="hong" readonly>
+			disable(데이터 전송 불가)
+			<input type="text" name="data3" value="park" disabled="disabled">
+		</fieldset>
+		
+		<fieldset>
+			<legend>체크박스(다중선택)</legend>
+			당신의 취미는: <br>
+			농구<input type="checkbox" name="sports_1" value="A" checked>
+			<!-- 전송하면 value 값이 넘어온다 
+				String str=request.getParameter("sports_1")
+				String str2=request.getParameter("sports_2")
+				String str3=request.getParameter("sports_3")
+				
+				만약에 name이 모두 sports라면, 배열형태로 전송한다
+			-->
+			야구<input type="checkbox" name="sports_2" value="B" checked="checked">
+			축구<input type="checkbox" name="sports_3" value="C">
+		</fieldset>
+		
+		<fieldset>
+			<legend>select 태그(단일)</legend>
+			<select name="year">
+				<option value="2016">2016년</option>
+				<option value="2015" selected>2015년</option>
+				<option value="2014">2014년</option>
+			</select>			
+		</fieldset>
+		
+		<fieldset>
+			<legend>select 태그(다중)</legend>
+			선호 과목: 
+			<select name="items" multiple="multiple">
+				<option value="01">java</option>
+				<option value="02" >oracle</option>
+				<option value="03">HTML</option>
+			</select>			
+		</fieldset>
+		
+		<fieldset>
+			<legend>라디오버튼</legend>
+			남<input type="radio" name="gender" value="1"> <!-- 요렇게 하면 하나만 가능 -->
+			여<input type="radio" name="gender" value="2" checked>					
+		</fieldset>
+		<fieldset>
+			<legend>기타 나머지 태그</legend>
+			화면에 출력은 되지 않음:
+			<input type="hidden" value="1000" name="hidata">
+			<br>
+			파일 선택:
+			<input type="file" name="uploadimage">
+			<!-- 전송은 inputstream, outputstream -->
+			<br>
+			게시판 글쓰기(여러줄)
+			<textarea rows="10" cols="20">글쓰기</textarea>
+			<br>
+			<b>각종 버튼들</b>
+			<input type="button" value="눌러보셈" onclick="alert('왜그랬어')">
+			<br>
+			이미지버튼
+			<input type="image" src="images/button.jpg">
+			<br>
+			전송: <input type="submit" value="회원가입">
+			<br>
+			취소: <input type="reset" value="초기화">
+		</fieldset>
+	</form>
+</body>
+</html>

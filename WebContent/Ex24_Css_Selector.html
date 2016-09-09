@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>선택자</title>
+	<style type="text/css">
+		/*
+			기본 선택자
+			p {color: red;}
+			다중 선택자
+			h1, h2, h3 {color: red;}
+			
+			사용자 정의 . class
+			.mystyle {color: red;}
+			사용자 정의 # id
+			#youstyle {color: red;}
+			
+			결합형태 <p class="one">
+			p.one {color: red;}
+			
+		*/
+	<!-- 자손, 하위 전부 선택자 -->
+	div p{color:green; font-family: "궁서체", "명조체", "광수체";}
+	
+	<!-- 자식 선택자 -->
+	.parent > p {
+		border: 3px double blue;
+		padding: 10px;
+		font-size: 15px;
+	}
+	
+
+       input[type=text]{
+          width: 150px;
+          display: block;
+          background-color: yellow;
+       }
+       input[type=button]{
+          width: 120px;
+          background-color: red;
+       }
+	
+	</style>
+</head>
+<body>
+	<p>나는 스타일이 적용되나?</p>
+	<div>
+		div태그
+	</div>
+	
+	<h3>하위(자손) 선택자</h3>
+	<div>
+		<p>선택자</p>
+		<p>선택자2</p>
+		<div>
+			<p>선택자3</p>
+		</div>
+	</div>
+	
+	<h3>자식 선택자</h3>
+	<div class="parent">
+		<p>나는 문단이다</p>
+		<div>
+			<p>나도 문단이다</p>
+		</div>
+	</div>
+	<hr>
+	<input type="text" value="css적용">
+	<br>
+	<input type="button" value="css적용">
+	
+</body>
+</html>
